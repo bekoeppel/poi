@@ -4,6 +4,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.ss.usermodel.Row;
 import org.subtlelib.poiooxml.api.condition.CellCondition;
 import org.subtlelib.poiooxml.api.configuration.Configuration;
+import org.subtlelib.poiooxml.api.filter.SupportsFilterRendering;
 import org.subtlelib.poiooxml.api.navigation.CellNavigation;
 import org.subtlelib.poiooxml.api.navigation.RowNavigation;
 import org.subtlelib.poiooxml.api.sheet.SheetContext;
@@ -19,7 +20,7 @@ import org.subtlelib.poiooxml.api.totals.SupportsColumnTotalsRendering;
  */
 public interface RowContext extends PlainDataOutput, FormattedDataOutput, CellNavigation<RowContext>, CellCondition<RowContext>,
 		RowNavigation<SheetContext, RowContext>, StyleConfiguration, StyleConfigurable<RowContext>,
-        SupportsColumnTotalsRendering<RowContext> {
+        SupportsColumnTotalsRendering<RowContext>, SupportsFilterRendering<RowContext> {
 
 	/**
 	 * Set width of the last output cell.
@@ -61,5 +62,10 @@ public interface RowContext extends PlainDataOutput, FormattedDataOutput, CellNa
      * @return native POI {@link XSSFRow}
      */
 	public Row getNativeRow();
-    
+
+    /**
+     * Return the current column index (cell index)
+     * @return the current column index (cell index)
+     */
+    public int getCurrentColNo();
 }

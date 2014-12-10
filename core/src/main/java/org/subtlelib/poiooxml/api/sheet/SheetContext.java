@@ -4,6 +4,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.subtlelib.poiooxml.api.condition.BlockCondition;
 import org.subtlelib.poiooxml.api.configuration.ConfigurationProvider;
+import org.subtlelib.poiooxml.api.filter.FilterDataRangeSource;
 import org.subtlelib.poiooxml.api.navigation.RowNavigation;
 import org.subtlelib.poiooxml.api.row.RowContext;
 import org.subtlelib.poiooxml.api.style.StyleConfigurable;
@@ -17,7 +18,7 @@ import org.subtlelib.poiooxml.api.totals.ColumnTotalsDataRangeSource;
  *
  */
 public interface SheetContext extends RowNavigation<SheetContext, RowContext>, BlockCondition<SheetContext>, 
-		SheetConfiguration<SheetContext>, ConfigurationProvider, StyleConfiguration, StyleConfigurable<SheetContext>, ColumnTotalsDataRangeSource {
+		SheetConfiguration<SheetContext>, ConfigurationProvider, StyleConfiguration, StyleConfigurable<SheetContext>, ColumnTotalsDataRangeSource, FilterDataRangeSource {
 
 	/**
 	 * Merge cells of the current row starting from column number {@code startColumn} and ending with a column {@code endColumn}.

@@ -2,6 +2,7 @@ package org.subtlelib.poiooxml.impl.sheet;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.subtlelib.poiooxml.api.configuration.Configuration;
+import org.subtlelib.poiooxml.api.filter.FilterDataRange;
 import org.subtlelib.poiooxml.api.row.RowContext;
 import org.subtlelib.poiooxml.api.sheet.SheetContext;
 import org.subtlelib.poiooxml.api.totals.ColumnTotalsDataRange;
@@ -109,4 +110,9 @@ public class SheetContextNoImpl extends InheritableStyleConfiguration<SheetConte
     public ColumnTotalsDataRange startColumnTotalsDataRangeFromNextRow() {
         throw new UnsupportedOperationException("Totals unsupported in conditional blocks");
     }
+
+	@Override
+	public FilterDataRange startFilterDataRangeFromCurrentCell() {
+		throw new UnsupportedOperationException("Filters unsupported in conditional blocks");
+	}
 }
