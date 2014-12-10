@@ -1,7 +1,7 @@
-poi
-===
+poi-ooxml
+=========
 
-A fancy way to boilerplate-less POI
+A fancy way to boilerplate-less POI-OOXML
 
 ## Examples
 ### Simple
@@ -48,7 +48,7 @@ The easiest use of subtlelib: we display a collection of domain objects in an ex
         public static void main(String[] args) throws IOException {
             SimpleReportView view = new SimpleReportView();
             WorkbookContext workbook = view.render(new SimpleReportModel().getPayments());
-            Files.write(workbook.toNativeBytes(), new File("simple_example.xls"));
+            Files.write(workbook.toNativeBytes(), new File("simple_example.xlsx"));
         }
     }
 #### Resulting file    

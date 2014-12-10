@@ -17,7 +17,7 @@ public class ConditionalReportController {
     public static void main(String[] args) throws IOException {
         ConditionalReportView view = new ConditionalReportView();
         WorkbookContext workbook = view.render(ConditionalReportModel.getExample());
-        Files.write(workbook.toNativeBytes(), new File("conditional_example_books.xls"));
+        Files.write(workbook.toNativeBytes(), new File("conditional_example_books.xlsx"));
     }
 }
 

@@ -16,6 +16,6 @@ public class SimpleReportController {
     public static void main(String[] args) throws IOException {
         SimpleReportView view = new SimpleReportView();
         WorkbookContext workbook = view.render(new SimpleReportModel().getPayments());
-        Files.write(workbook.toNativeBytes(), new File("simple_example.xls"));
+        Files.write(workbook.toNativeBytes(), new File("simple_example.xlsx"));
     }
 }
