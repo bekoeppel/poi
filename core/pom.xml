@@ -4,16 +4,16 @@
 
     <parent>
         <groupId>org.subtlelib</groupId>
-        <artifactId>poi.builder.parent</artifactId>
+        <artifactId>poi-ooxml.builder.parent</artifactId>
         <version>1.0.2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>poi.builder</artifactId>
+    <artifactId>poi-ooxml.builder</artifactId>
 
-    <name>POI builder</name>
-    <description>Convenience library for apache poi-based xls documents creation</description>
-    <url>https://github.com/subtlelib/poi</url>
+    <name>POI-OOXML builder</name>
+    <description>Convenience library for apache poi-based xlsx documents creation</description>
+    <url>https://github.com/bekoeppel/poi-ooxml</url>
 
     <dependencies>
         <dependency>

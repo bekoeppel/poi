@@ -4,16 +4,16 @@
 
     <parent>
         <groupId>org.subtlelib</groupId>
-        <artifactId>poi.builder.parent</artifactId>
+        <artifactId>poi-ooxml.builder.parent</artifactId>
         <version>1.0.2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>poi.builder.examples</artifactId>
+    <artifactId>poi-ooxml.builder.examples</artifactId>
 
-    <name>POI builder examples</name>
-    <description>Usage examples for POI builder library</description>
-    <url>https://github.com/subtlelib/poi</url>
+    <name>POI-OOXML builder examples</name>
+    <description>Usage examples for POI-OOXML builder library</description>
+    <url>https://github.com/bekoeppel/poi-ooxml</url>
 
     <properties>
         <joda.time.version>2.3</joda.time.version>
@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.subtlelib</groupId>
-            <artifactId>poi.builder</artifactId>
+            <artifactId>poi-ooxml.builder</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
