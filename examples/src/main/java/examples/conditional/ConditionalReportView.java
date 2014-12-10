@@ -1,8 +1,8 @@
 package examples.conditional;
 
-import org.subtlelib.poi.api.sheet.SheetContext;
-import org.subtlelib.poi.api.workbook.WorkbookContext;
-import org.subtlelib.poi.impl.workbook.WorkbookContextFactory;
+import org.subtlelib.poiooxml.api.sheet.SheetContext;
+import org.subtlelib.poiooxml.api.workbook.WorkbookContext;
+import org.subtlelib.poiooxml.impl.workbook.WorkbookContextFactory;
 
 /**
  * This example shows how to use subtlelib to render a report with grouped data.

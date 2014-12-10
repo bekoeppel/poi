@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-	<logger name="org.subtlelib.poi" level="debug" />
+	<logger name="org.subtlelib.poiooxml" level="debug" />
 
     <root level="info">
         <appender-ref ref="console" />
