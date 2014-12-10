@@ -4,11 +4,11 @@ import static org.apache.poi.ss.usermodel.CellStyle.BORDER_DOUBLE;
 import static org.apache.poi.ss.usermodel.CellStyle.BORDER_NONE;
 import static org.apache.poi.ss.usermodel.CellStyle.BORDER_THIN;
 
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.subtlelib.poi.api.style.AdditiveStyle;
 
-public enum CellStyle implements AdditiveStyle {
+public enum SubtleCellStyle implements AdditiveStyle {
 
 	BORDERS_THIN_ALL(BORDER_THIN, BORDER_THIN, BORDER_THIN, BORDER_THIN),
 	BORDERS_BOTTOM_THIN(BORDER_NONE, BORDER_NONE, BORDER_THIN, BORDER_NONE),
@@ -20,7 +20,7 @@ public enum CellStyle implements AdditiveStyle {
     private final short borderBottom;
     private final short borderLeft;
 
-    private CellStyle(short borderTop, short borderRight, short borderBottom, short borderLeft) {
+    private SubtleCellStyle(short borderTop, short borderRight, short borderBottom, short borderLeft) {
         this.borderTop = borderTop;
         this.borderRight = borderRight;
         this.borderBottom = borderBottom;
@@ -28,7 +28,7 @@ public enum CellStyle implements AdditiveStyle {
     }
 
 	@Override
-	public void enrich(HSSFWorkbook workbook, HSSFCellStyle style) {
+	public void enrich(XSSFWorkbook workbook, CellStyle style) {
 		style.setBorderTop(borderTop);
         style.setBorderRight(borderRight);
         style.setBorderBottom(borderBottom);

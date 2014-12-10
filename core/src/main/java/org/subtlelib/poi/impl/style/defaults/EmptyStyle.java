@@ -1,7 +1,7 @@
 package org.subtlelib.poi.impl.style.defaults;
 
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.subtlelib.poi.api.style.Style;
 
 /**
@@ -11,6 +11,6 @@ import org.subtlelib.poi.api.style.Style;
  */
 public class EmptyStyle implements Style {
     @Override
-    public void enrich(HSSFWorkbook workbook, HSSFCellStyle style) {}
+    public void enrich(XSSFWorkbook workbook, CellStyle style) {}
     public static final Style instance = new EmptyStyle();
 }
